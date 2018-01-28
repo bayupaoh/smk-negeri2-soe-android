@@ -1,0 +1,9 @@
+{
+  "generator-kotlin-android": {
+    "promptValues": {
+      "name": "SMK Negeri 2 SoE",
+      "targetSdk": "26",
+      "minSdk": "19"
+    }
+  }
+}
