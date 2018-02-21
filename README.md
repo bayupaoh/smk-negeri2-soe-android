@@ -7,24 +7,20 @@ Sample : https://github.com/androidstarters/generator-kotlin-android.git dan htt
 # Kontribusi
 Untuk alumni dan juga siswa SMK Negeri 2 SoE yang ingin berkontribusi bisa menghubungi [bayupaoh@gmail.com]()
 
-# Library
-- [RxKotlin2](https://github.com/ReactiveX/RxKotlin) and [RxAndroid](https://github.com/ReactiveX/RxAndroid)
-- [Retrofit](http://square.github.io/retrofit/)
-- [Dagger 2](http://google.github.io/dagger/)
+## Library
+- [Android Support Library 27.0.2](https://developer.android.com/topic/libraries/support-library/index.html)
+- [RxJava2](https://github.com/ReactiveX/RxJava) and [RxAndroid](https://github.com/ReactiveX/RxAndroid)
+- [Retrofit 2.3.0](http://square.github.io/retrofit/)
+- [Logging Interceptor](https://github.com/square/okhttp/tree/master/okhttp-logging-interceptor)
+- [Dagger 2.10](http://google.github.io/dagger/)
+- [RxBinding RecyclerView Kotlin 0.4.0](https://github.com/JakeWharton/butterknife)
+- [RxBus](https://github.com/AndroidKnife/RxBus)
+- [SDP Dimen 1.0.4](https://github.com/intuit/sdp)
+- [Multidex 1.02](https://developer.android.com/studio/build/multidex.html)
+- [Firebase 11.8.0](https://firebase.google.com/docs/android/setup)
+- [Material Dialogs 0.9.6](https://github.com/afollestad/material-dialogs)
+- [Fresco 1.8.0](https://github.com/facebook/fresco)
+- [X-Recyclerview 1.5.9](https://github.com/XRecyclerView/XRecyclerView)
 - [Butterknife](https://github.com/JakeWharton/butterknife)
-- [Google Play Services](https://developers.google.com/android/guides/overview)
-- [Timber](https://github.com/JakeWharton/timber)
-- [Glide 3](https://github.com/bumptech/glide)
-- [Espresso](https://google.github.io/android-testing-support-library/) for UI tests
-- [Robolectric](http://robolectric.org/) for framework specific unit tests
-- [Mockito](http://mockito.org/)
-- [Chuck](https://github.com/jgilfelt/chuck)
-- [AH Bottom Navigation](https://github.com/aurelhubert/ahbottomnavigation)
-- [Rx Life Cycle](https://github.com/trello/RxLifecycle)
-- [Dexter](https://github.com/Karumi/Dexter)
-- [Caligraphy](https://github.com/chrisjenx/Calligraphy)
-- [Circle Image View](https://github.com/hdodenhof/CircleImageView)
-- [Thin Download Manager](https://github.com/smanikandan14/ThinDownloadManager)
-- [Advance WebView](https://github.com/delight-im/Android-AdvancedWebView)
 
 
