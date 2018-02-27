@@ -20,6 +20,11 @@ class BaseRecyclerView : XRecyclerView {
         layoutManager = LinearLayoutManager(context)
     }
 
+    fun setUpAsListHorizontal() {
+        setHasFixedSize(true)
+        layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    }
+
     fun setUpAsListInScroll() {
         setHasFixedSize(true)
         layoutManager = object : LinearLayoutManager(context) {
