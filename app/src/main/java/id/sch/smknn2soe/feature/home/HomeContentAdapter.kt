@@ -9,8 +9,27 @@ import id.sch.smknn2soe.model.dummy.DummyDataArticle
 /**
  * Created by King Oil on 26/02/2018.
  */
-class HomeContentAdapter(context: Context) : BaseRecyclerAdapter<DummyDataArticle, HomeContentItemView>(context) {
-    override fun getItemResourceLayout(viewType: Int): Int = R.layout.layout_home_content
+class HomeContentAdapter(context: Context) : BaseRecyclerAdapter<Any, HomeContentItemView>(context) {
+    val ITEM_TYPE_ARTICLE = 1
+    val ITEM_TYPE_EVENT = 2
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeContentItemView = HomeContentItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+    override fun getItemResourceLayout(viewType: Int): Int {
+        if (viewType == ITEM_TYPE_ARTICLE) {
+            return R.layout.layout_home_content_article
+        } else {
+            return R.layout.layout_home_content_event
+        }
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        if (datas.get(position) is DummyDataArticle) {
+            return ITEM_TYPE_ARTICLE
+        } else {
+            return ITEM_TYPE_EVENT
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeContentItemView {
+        return HomeContentItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+    }
 }

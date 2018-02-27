@@ -1,8 +1,11 @@
 package id.sch.smknn2soe.feature.home
 
+import android.util.Log
 import android.view.View
+import com.google.gson.Gson
 import id.sch.smknn2soe.base.ui.adapter.BaseRecyclerAdapter
 import id.sch.smknn2soe.base.ui.adapter.viewholder.BaseItemViewHolder
+import id.sch.smknn2soe.helper.Shortcut
 import id.sch.smknn2soe.model.dummy.DummyDataArticle
 import id.sch.smknn2soe.model.dummy.DummyDataHead
 import kotlinx.android.synthetic.main.layout_home_head.view.*
@@ -22,13 +25,8 @@ class HomeHeadItemView(itemView: View, mItemClickListener: BaseRecyclerAdapter.O
         itemView.layoutHomeRecHome.setLoadingMoreEnabled(false)
         itemView.layoutHomeRecHome.adapter = adapter
 
-        var dataItem = DummyDataArticle()
-        dataItem.title = "Acara pentas seni siswa berjalan sukses di gor nekmese"
-        dataItem.date = "12 januari 2017"
-        dataItem.imageUrl = "http://setara-institute.org/wp-content/uploads/2017/09/1494013633778-Screen-Shot-2017-05-05-at-72946-PM-660x330.jpg"
-
-        adapter?.add(dataItem)
-        adapter?.add(dataItem)
+        data?.content?.let { adapter?.addAll(it) }
+        Log.i(Shortcut.LOG,Gson().toJson(data?.content))
         adapter?.notifyDataSetChanged()
     }
 }

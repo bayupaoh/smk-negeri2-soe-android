@@ -13,5 +13,6 @@
     <color name="divider">#BDBDBD</color>
     <color name="white_transparent">#eaeaea</color>
     <color name="grey_150">#EEEEEE</color>
+    <color name="grey_600">#727272</color>
     <color name="grey_900">#212121</color>
 </resources>

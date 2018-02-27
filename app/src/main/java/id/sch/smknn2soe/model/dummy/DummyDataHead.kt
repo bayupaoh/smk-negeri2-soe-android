@@ -6,5 +6,5 @@ package id.sch.smknn2soe.model.dummy
 open class DummyDataHead {
     var position: Int? = 0
     var title: String? = ""
-    var content: ArrayList<DummyDataArticle>? = ArrayList()
+    var content: ArrayList<Any>? = ArrayList()
 }
