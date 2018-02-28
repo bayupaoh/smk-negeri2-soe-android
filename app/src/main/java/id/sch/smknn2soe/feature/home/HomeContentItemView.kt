@@ -6,8 +6,10 @@ import android.view.View
 import id.sch.smknn2soe.base.ui.adapter.BaseRecyclerAdapter
 import id.sch.smknn2soe.base.ui.adapter.viewholder.BaseItemViewHolder
 import id.sch.smknn2soe.model.dummy.DummyDataArticle
+import id.sch.smknn2soe.model.dummy.DummyDataCalendar
 import id.sch.smknn2soe.model.dummy.DummyDataEvent
 import kotlinx.android.synthetic.main.layout_home_content_article.view.*
+import kotlinx.android.synthetic.main.layout_home_content_calendar.view.*
 import kotlinx.android.synthetic.main.layout_home_content_event.view.*
 
 /**
@@ -20,18 +22,18 @@ class HomeContentItemView(itemView: View, mItemClickListener: BaseRecyclerAdapte
             var item = data as DummyDataArticle
             itemView.layoutHomeContentArticleTitle.text = item?.title
             itemView.layoutHomeContentArticleDate.text = item?.date
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                itemView.layoutHomeContentArticleDate.justificationMode = JUSTIFICATION_MODE_INTER_WORD
-            }
             itemView.layoutHomeContentArticleImg.setImageURI(item?.imageUrl)
         } else if (data is DummyDataEvent) {
             var item = data as DummyDataEvent
             itemView.layoutHomeContentEventTitle.text = item?.title
             itemView.layoutHomeContentEventDate.text = item?.date
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                itemView.layoutHomeContentArticleDate.justificationMode = JUSTIFICATION_MODE_INTER_WORD
-            }
+            itemView.layoutHomeContentEventLocation.text = item?.location
             itemView.layoutHomeContentEventImg.setImageURI(item?.imageUrl)
+        } else if (data is DummyDataCalendar) {
+            var item = data as DummyDataCalendar
+            itemView.layoutHomeCalendarTitle.text = item?.title
+            itemView.layoutHomeCalendarDate.text = item?.date
+            itemView.layoutHomeCalendarMonth.text = item?.month
         }
     }
 }

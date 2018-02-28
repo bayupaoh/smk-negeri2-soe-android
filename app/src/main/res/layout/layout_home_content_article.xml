@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:fresco="http://schemas.android.com/tools"
     android:layout_margin="5dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="2dp"
@@ -21,10 +21,10 @@
             android:id="@+id/layoutHomeContentArticleImg"
             android:layout_width="match_parent"
             android:layout_height="222dp"
-            fresco:actualImageScaleType="fitXY"
-            fresco:placeholderImageScaleType="fitXY"
             android:layout_centerHorizontal="true"
-            android:src="@color/grey_150" />
+            android:src="@color/grey_150"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImageScaleType="fitXY" />
 
         <View
             android:layout_width="match_parent"
@@ -40,6 +40,21 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/layoutHomeContentArticleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/layoutHomeContentArticleDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,20 +65,6 @@
                 android:paddingRight="16dp"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/layoutHomeContentArticleTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_vertical"
-                android:maxLines="2"
-                android:textAllCaps="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
         </LinearLayout>
     </RelativeLayout>
 </android.support.v7.widget.CardView>

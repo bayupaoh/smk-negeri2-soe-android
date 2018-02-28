@@ -1,8 +1,8 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:fresco="http://schemas.android.com/tools"
     android:background="@color/white_transparent">
 
     <android.support.design.widget.AppBarLayout
@@ -30,12 +30,12 @@
                     android:id="@+id/imageHome"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
+                    android:background="@color/blue"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
                     fresco:actualImageScaleType="centerCrop"
-                    fresco:placeholderImageScaleType="centerCrop"
-                    android:background="@color/blue"
-                    app:layout_collapseMode="parallax" />
+                    fresco:placeholderImageScaleType="centerCrop" />
 
                 <View
                     android:layout_width="match_parent"
@@ -45,14 +45,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SMK NEGERI 2 SoE\nMembangun dengan hati"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:textAllCaps="true"
+                    android:layout_alignParentBottom="true"
                     android:layout_marginBottom="16dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:gravity="center"
+                    android:text="SMK NEGERI 2 SoE\nMembangun dengan hati"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <android.support.v7.widget.Toolbar
@@ -66,17 +66,38 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
-        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <id.sch.smknn2soe.base.ui.recyclerview.BaseRecyclerView
-            android:id="@+id/recHome"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:descendantFocusability="blocksDescendants"/>
+            android:descendantFocusability="blocksDescendants">
 
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/item_placeholder_home" />
+
+                    <include layout="@layout/item_placeholder_home" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <id.sch.smknn2soe.base.ui.recyclerview.BaseRecyclerView
+                android:id="@+id/recHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
