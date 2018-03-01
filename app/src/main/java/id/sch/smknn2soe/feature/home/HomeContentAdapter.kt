@@ -17,11 +17,11 @@ class HomeContentAdapter(context: Context) : BaseRecyclerAdapter<Any, HomeConten
 
     override fun getItemResourceLayout(viewType: Int): Int {
         if (viewType == ITEM_TYPE_ARTICLE) {
-            return R.layout.layout_home_content_article
+            return R.layout.layout_home_content_article_item
         } else if (viewType == ITEM_TYPE_EVENT) {
-            return R.layout.layout_home_content_event
+            return R.layout.layout_home_content_event_item
         } else {
-            return R.layout.layout_home_content_calendar
+            return R.layout.layout_home_content_calendar_item
         }
     }
 

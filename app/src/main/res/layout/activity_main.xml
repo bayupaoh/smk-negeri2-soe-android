@@ -56,10 +56,9 @@
     </LinearLayout>
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbarMain"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/transparent"
         android:gravity="left"
         app:layout_scrollFlags="scroll|enterAlways">
 

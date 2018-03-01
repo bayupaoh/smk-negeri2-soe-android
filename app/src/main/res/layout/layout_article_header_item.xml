@@ -1,0 +1,71 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/headerItemArticle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/layoutHeaderArticleImg"
+            android:layout_width="match_parent"
+            android:layout_height="222dp"
+            android:layout_centerHorizontal="true"
+            android:src="@color/grey_150"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_alignBottom="@id/layoutHeaderArticleImg"
+            android:alpha="0.6"
+            android:background="@color/grey_900" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/layoutHeaderArticleImg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/layoutHeaderArticleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/layoutHeaderArticleDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

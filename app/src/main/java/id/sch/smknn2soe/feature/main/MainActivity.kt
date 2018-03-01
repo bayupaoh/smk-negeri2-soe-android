@@ -49,6 +49,7 @@ class MainActivity : BaseActivity(), MainActivityView {
                 AHBottomNavigation.OnTabSelectedListener { position: Int, wasSelected: Boolean ->
                     currentItem = position
                     ahViewpaggerMain.setCurrentItem(currentItem, true)
+                    setColorToolbar(position)
                     when (currentItem) {
                         0 -> txtTitleToolbarMain.text = resources.getText(R.string.menu_home)
                         1 -> txtTitleToolbarMain.text = resources.getText(R.string.menu_berita)
@@ -63,6 +64,14 @@ class MainActivity : BaseActivity(), MainActivityView {
         mainActivityPagerAdapter = MainActivityPagerAdapter(supportFragmentManager)
         ahViewpaggerMain.adapter = mainActivityPagerAdapter
         bottomNavigationMain.setCurrentItem(currentItem)
+    }
+
+    private fun setColorToolbar(position: Int) {
+        if(position == 0){
+            toolbarMain?.setBackgroundColor(resources.getColor(android.R.color.transparent))
+        }else{
+            toolbarMain?.setBackgroundColor(resources.getColor(R.color.blue))
+        }
     }
 
     private fun setupPresenter() {

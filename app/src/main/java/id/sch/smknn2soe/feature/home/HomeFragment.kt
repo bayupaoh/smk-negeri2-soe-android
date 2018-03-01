@@ -98,7 +98,7 @@ class HomeFragment : BaseFragment() {
         shimmerHome.visibility = VISIBLE
         startAnimationShimmer(shimmerHome)
 
-        Handler().postDelayed(Runnable { initData() }, SPLASH_TIME_OUT)
+        initData()
     }
 
     fun startAnimationShimmer(shimmerFrameLayout: ShimmerFrameLayout) {
