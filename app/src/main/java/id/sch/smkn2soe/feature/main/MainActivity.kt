@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
+import android.view.Menu
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem
 
@@ -54,7 +55,7 @@ class MainActivity : BaseActivity(), MainActivityView {
                         1 -> txtTitleToolbarMain.text = resources.getText(R.string.menu_berita)
                         2 -> txtTitleToolbarMain.text = resources.getText(R.string.menu_acara)
                         3 -> txtTitleToolbarMain.text = resources.getText(R.string.menu_kalender)
-                        4 -> txtTitleToolbarMain.text = resources.getText(R.string.menu_info_sekolah)
+                        4 -> txtTitleToolbarMain.text = resources.getText(R.string.menu_info_sekolah_title)
                     }
                     true
                 }
@@ -66,9 +67,9 @@ class MainActivity : BaseActivity(), MainActivityView {
     }
 
     private fun setColorToolbar(position: Int) {
-        if(position == 0){
+        if (position == 0) {
             toolbarMain?.setBackgroundColor(resources.getColor(android.R.color.transparent))
-        }else{
+        } else {
             toolbarMain?.setBackgroundColor(resources.getColor(R.color.blue))
         }
     }
@@ -77,12 +78,18 @@ class MainActivity : BaseActivity(), MainActivityView {
         presenter = MainActivityPresenter()
         presenter!!.attachView(this)
 
-        if(presenter!!.getDataFirstInstall()){
+        if (presenter!!.getDataFirstInstall()) {
             presenter!!.setDataFirstInstall(false)
             var intent = WalkthroughActivity.createIntent(this)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
+    }
+
+    
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
     }
 
     override fun onDestroy() {

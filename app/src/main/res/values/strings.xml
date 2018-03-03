@@ -7,6 +7,14 @@
     <string name="menu_acara">ACARA</string>
     <string name="menu_kalender">KALENDER</string>
     <string name="menu_info_sekolah">SMKN 2 SOE</string>
+    <string name="menu_info_sekolah_title">INFO SEKOLAH</string>
+
+    <string name="menu_info_sekolah_visi">VISI &amp; MISI</string>
+    <string name="menu_info_sekolah_mayor">JURUSAN</string>
+    <string name="menu_info_sekolah_award">PRESTASI</string>
+    <string name="menu_info_sekolah_video">VIDEO</string>
+    <string name="menu_info_sekolah_ekskul">EKSTRA KURIKULER</string>
+    <string name="menu_info_sekolah_contact_location">LOKASI DAN KONTAK</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

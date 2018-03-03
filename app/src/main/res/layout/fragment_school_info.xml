@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/blue"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:src="@drawable/img_logo_smk_white"/>
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_16dp"
+        android:weightSum="3">
+
+        <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageView
+                    android:id="@+id/schoolInfoVision"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_vision"
+                    android:tint="@color/blue" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:layout_below="@id/schoolInfoVision"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:text="@string/menu_info_sekolah_visi"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageView
+                    android:id="@+id/schoolInfoMayor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_mayor"
+                    android:tint="@color/blue" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:layout_below="@id/schoolInfoMayor"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:text="@string/menu_info_sekolah_mayor"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageView
+                    android:id="@+id/schoolInfoAward"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_award"
+                    android:tint="@color/blue" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:layout_below="@id/schoolInfoAward"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:text="@string/menu_info_sekolah_award"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageView
+                    android:id="@+id/schoolInfoVideo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_video"
+                    android:tint="@color/blue" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:layout_below="@id/schoolInfoVideo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:text="@string/menu_info_sekolah_video"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageView
+                    android:id="@+id/schoolInfoEkskul"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_extra_kurikuler"
+                    android:tint="@color/blue" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:layout_below="@id/schoolInfoEkskul"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:text="@string/menu_info_sekolah_ekskul"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageView
+                    android:id="@+id/schoolInfoContactLocation"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_info_location"
+                    android:tint="@color/blue" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:layout_below="@id/schoolInfoContactLocation"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:text="@string/menu_info_sekolah_contact_location"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>
