@@ -3,6 +3,7 @@ package id.sch.smkn2soe.feature.main
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import id.sch.smkn2soe.feature.calendar.CalendarFragment
 import id.sch.smkn2soe.feature.event.EventFragment
 import id.sch.smkn2soe.feature.home.HomeFragment
 import id.sch.smkn2soe.feature.news.NewsFragment
@@ -19,7 +20,7 @@ class MainActivityPagerAdapter (fm:FragmentManager): FragmentPagerAdapter(fm) {
         fragments.add(HomeFragment())
         fragments.add(NewsFragment())
         fragments.add(EventFragment())
-        fragments.add(HomeFragment())
+        fragments.add(CalendarFragment())
         fragments.add(HomeFragment())
     }
 
