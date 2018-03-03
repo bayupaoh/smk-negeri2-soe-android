@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="id.sch.smknn2soe">
+    package="id.sch.smkn2soe">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".BaseApplication"
+        android:name="id.sch.smkn2soe.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feature.member.MemberActivity" />
+        <activity android:name="id.sch.smkn2soe.feature.member.MemberActivity" />
 
-        <service android:name=".fcm.FCMFirebaseMessagingService">
+        <service android:name="id.sch.smkn2soe.fcm.FCMFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".fcm.FCMFirebaseInstanceIDService">
+        <service android:name="id.sch.smkn2soe.fcm.FCMFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".feature.walkthrough.WalkthroughActivity">
+        <activity android:name="id.sch.smkn2soe.feature.walkthrough.WalkthroughActivity">
         </activity>
         <activity
-            android:name=".feature.main.MainActivity">
+            android:name="id.sch.smkn2soe.feature.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

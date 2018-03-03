@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <id.sch.smknn2soe.base.ui.recyclerview.BaseRecyclerView
+        <id.sch.smkn2soe.base.ui.recyclerview.BaseRecyclerView
             android:id="@+id/memberList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

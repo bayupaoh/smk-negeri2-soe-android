@@ -44,7 +44,7 @@
 
     </LinearLayout>
 
-    <id.sch.smknn2soe.base.ui.recyclerview.BaseRecyclerView
+    <id.sch.smkn2soe.base.ui.recyclerview.BaseRecyclerView
         android:id="@+id/layoutHomeRecHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

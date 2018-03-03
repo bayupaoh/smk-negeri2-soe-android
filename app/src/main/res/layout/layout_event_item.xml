@@ -20,7 +20,7 @@
         android:orientation="horizontal">
 
         <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/layoutHomeContentEventImg"
+            android:id="@+id/layoutItemEventImg"
             android:layout_width="90dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
@@ -36,7 +36,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/layoutHomeContentEventTitle"
+                android:id="@+id/layoutItemEventTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
@@ -47,7 +47,7 @@
                 android:ellipsize="end" />
 
             <TextView
-                android:id="@+id/layoutHomeContentEventDate"
+                android:id="@+id/layoutItemEventDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
@@ -56,7 +56,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/layoutHomeContentEventLocation"
+                android:id="@+id/layoutItemEventLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
