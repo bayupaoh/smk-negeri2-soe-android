@@ -6,5 +6,6 @@ package id.sch.smkn2soe.helper
 class Shortcut {
     companion object {
         val LOG = "[SMK2]"
+
     }
 }

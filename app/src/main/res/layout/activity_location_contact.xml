@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_150"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarLocation"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            android:gravity="center_horizontal" />
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frameImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLocation">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgLocationContact"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue"
+            android:scaleType="centerCrop"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_image_banner" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtLocationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameImage"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="SMK NEGERI 2 SOE"
+        android:textColor="@color/blue_dark"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txtLocationAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLocationName"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="JL. Gajah Mada No. 76, Karang Siri, Kota Soe, Timor Tengah Selatan, Nusa Tenggara Timur 85511"
+        android:textColor="@color/grey_600"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtHeaderPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLocationAddress"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Telepon"
+        android:textColor="@color/blue_dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeaderPhone"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="+62-388-2700035"
+        android:textColor="@color/grey_600"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtHeaderPhone"
+        android:background="?selectableItemBackground"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_call"
+        android:tint="@color/blue_dark" />
+
+    <TextView
+        android:id="@+id/txtHeaderFax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPhone"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Fax"
+        android:textColor="@color/blue_dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtFax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeaderFax"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="+62-0388-21031"
+        android:textColor="@color/grey_600"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/btnFax"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtHeaderFax"
+        android:background="?selectableItemBackground"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_call"
+        android:tint="@color/blue_dark" />
+
+    <TextView
+        android:id="@+id/txtHeaderEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtFax"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Email"
+        android:textColor="@color/blue_dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeaderEmail"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="bayupaoh@gmail.com"
+        android:textColor="@color/grey_600"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/btnMail"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtHeaderEmail"
+        android:background="?selectableItemBackground"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_mail"
+        android:tint="@color/blue_dark" />
+</RelativeLayout>
