@@ -43,7 +43,10 @@
             android:label="@string/title_activity_location_contact" />
         <activity
             android:name=".feature.mayor.MayorActivity"
-            android:label="@string/title_activity_mayor"></activity>
+            android:label="@string/title_activity_mayor" />
+        <activity
+            android:name=".feature.extrakurikuler.ExtraKurikulerActivity"
+            android:label="@string/title_activity_extra_kurikuler"></activity>
     </application>
 
 </manifest>

@@ -21,4 +21,5 @@
     <string name="title_activity_vision_mision">VisionMisionActivity</string>
     <string name="title_activity_location_contact">LocationContactActivity</string>
     <string name="title_activity_mayor">MayorActivity</string>
+    <string name="title_activity_extra_kurikuler">ExtraKurikulerActivity</string>
 </resources>
