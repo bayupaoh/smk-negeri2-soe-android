@@ -49,7 +49,10 @@
             android:label="@string/title_activity_extra_kurikuler" />
         <activity
             android:name=".feature.awards.AwardActivity"
-            android:label="@string/title_activity_award"></activity>
+            android:label="@string/title_activity_award" />
+        <activity
+            android:name=".feature.teacher.TeacherActivity"
+            android:label="@string/title_activity_teacher"></activity>
     </application>
 
 </manifest>

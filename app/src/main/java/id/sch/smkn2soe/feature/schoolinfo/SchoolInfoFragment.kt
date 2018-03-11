@@ -11,6 +11,7 @@ import id.sch.smkn2soe.feature.locationcontact.LocationContactActivity
 import id.sch.smkn2soe.feature.mayor.MayorActivity
 import id.sch.smkn2soe.feature.extrakurikuler.ExtraKurikulerActivity
 import id.sch.smkn2soe.feature.awards.AwardActivity
+import id.sch.smkn2soe.feature.teacher.TeacherActivity
 import kotlinx.android.synthetic.main.fragment_school_info.*
 
 
@@ -26,6 +27,7 @@ class SchoolInfoFragment : BaseFragment() {
         schoolInfoMayor.setOnClickListener { view ->  startActivity(MayorActivity.createIntent(activity!!))}
         schoolInfoEkskul.setOnClickListener { view ->  startActivity(ExtraKurikulerActivity.createIntent(activity!!))}
         schoolInfoAward.setOnClickListener { view ->  startActivity(AwardActivity.createIntent(activity!!))}
+        schoolInfoTeacher.setOnClickListener { view ->  startActivity(TeacherActivity.createIntent(activity!!))}
     }
 
 

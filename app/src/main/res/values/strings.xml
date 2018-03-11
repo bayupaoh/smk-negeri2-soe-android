@@ -24,4 +24,5 @@
     <string name="title_activity_extra_kurikuler">ExtraKurikulerActivity</string>
     <string name="title_activity_award">AwardActivity</string>
     <string name="menu_info_guru_dan_pegawai">GURU DAN PEGAWAI</string>
+    <string name="title_activity_teacher">TeacherActivity</string>
 </resources>
