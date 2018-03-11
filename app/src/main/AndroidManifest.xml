@@ -46,7 +46,10 @@
             android:label="@string/title_activity_mayor" />
         <activity
             android:name=".feature.extrakurikuler.ExtraKurikulerActivity"
-            android:label="@string/title_activity_extra_kurikuler"></activity>
+            android:label="@string/title_activity_extra_kurikuler" />
+        <activity
+            android:name=".feature.awards.AwardActivity"
+            android:label="@string/title_activity_award"></activity>
     </application>
 
 </manifest>

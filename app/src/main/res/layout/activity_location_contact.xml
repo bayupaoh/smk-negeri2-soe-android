@@ -183,4 +183,46 @@
         android:layout_marginRight="8dp"
         android:src="@drawable/ic_mail"
         android:tint="@color/blue_dark" />
+
+    <TextView
+        android:id="@+id/txtHeaderWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Website"
+        android:textColor="@color/blue_dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeaderWeb"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="http://smkn2soe.sch.id"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:clickable="true"
+        android:textColor="@color/grey_600"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/btnWeb"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtHeaderWeb"
+        android:background="?selectableItemBackground"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_website"
+        android:tint="@color/blue_dark" />
 </RelativeLayout>

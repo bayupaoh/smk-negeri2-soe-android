@@ -46,13 +46,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="16dp"
+                    android:layout_margin="16dp"
                     android:gravity="center"
-                    android:text="SMK NEGERI 2 SoE\nMembangun dengan hati"
+                    android:text="Selamat Datang SMK NEGERI 2 SoE\n"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:visibility="gone"
+                    android:textSize="16sp"
+                    android:visibility="visible"
                     android:textStyle="bold" />
             </RelativeLayout>
 

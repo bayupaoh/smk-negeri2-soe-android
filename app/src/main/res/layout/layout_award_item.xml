@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center">
+
         <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/layoutExtraKurikulerImg"
+            android:id="@+id/layoutAwardImg"
             android:layout_width="match_parent"
             android:layout_height="222dp"
             android:layout_centerHorizontal="true"
@@ -26,20 +27,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/layoutExtraKurikulerImg"
-            android:orientation="vertical"
+            android:layout_alignBottom="@id/layoutAwardImg"
+            android:alpha="0.8"
             android:background="@color/grey_900"
-            android:alpha="0.8">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/layoutExtraKurikulerTitle"
+                android:id="@+id/layoutAwardTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
                 android:ellipsize="end"
                 android:fontFamily="sans-serif-medium"
                 android:maxLines="2"
                 android:minLines="2"
-                android:layout_marginTop="@dimen/_8dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:textAllCaps="true"

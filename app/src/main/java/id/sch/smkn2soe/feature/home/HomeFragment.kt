@@ -79,7 +79,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setupView() {
-        imageHome.setImageURI("http://static.republika.co.id/uploads/images/inpicture_slide/sma-muhammadiyah-1-yogyakarta-_140303173113-516.jpg")
+        imageHome.setImageURI("https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/20728235_1576084712413168_4168956859642455220_n.jpg?oh=a9d528be39964e2c028cee24a459850c&oe=5B4E7EE3    ")
 
         adapter = HomeHeadAdapter(activity!!)
 

@@ -34,11 +34,6 @@ class BaseRecyclerView : XRecyclerView {
         }
     }
 
-    fun setUpAsGrid(spanCount: Int) {
-        setHasFixedSize(true)
-        layoutManager = GridLayoutManager(context, spanCount)
-    }
-
     fun setUpAsGridInScroll(spanCount: Int) {
         setHasFixedSize(true)
         layoutManager = object : GridLayoutManager(context, spanCount) {

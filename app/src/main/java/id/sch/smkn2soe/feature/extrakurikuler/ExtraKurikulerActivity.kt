@@ -68,6 +68,7 @@ class ExtraKurikulerActivity : BaseActivity(), ExtraKurikulerActivityView, Swipe
         finish()
         return super.onSupportNavigateUp()
     }
+
     companion object {
 
         fun createIntent(context: Context): Intent {
