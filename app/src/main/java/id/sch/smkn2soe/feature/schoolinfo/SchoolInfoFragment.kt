@@ -11,6 +11,7 @@ import id.sch.smkn2soe.R
 import id.sch.smkn2soe.base.ui.BaseFragment
 import id.sch.smkn2soe.feature.visionmision.VisionMisionActivity
 import id.sch.smkn2soe.feature.locationcontact.LocationContactActivity
+import id.sch.smkn2soe.feature.mayor.MayorActivity
 import kotlinx.android.synthetic.main.fragment_school_info.*
 
 
@@ -23,6 +24,7 @@ class SchoolInfoFragment : BaseFragment() {
     override fun onViewReady(savedInstanceState: Bundle?) {
         schoolInfoVision.setOnClickListener { view ->  startActivity(VisionMisionActivity.createIntent(activity!!))}
         schoolInfoContactLocation.setOnClickListener { view ->  startActivity(LocationContactActivity.createIntent(activity!!))}
+        schoolInfoMayor.setOnClickListener { view ->  startActivity(MayorActivity.createIntent(activity!!))}
     }
 
 

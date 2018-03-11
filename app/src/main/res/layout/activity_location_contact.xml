@@ -7,12 +7,12 @@
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBarLocation"
+        android:id="@+id/appBarLocationContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarLocation"
+            android:id="@+id/toolbarLocationContact"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/blue"
@@ -20,10 +20,10 @@
     </android.support.design.widget.AppBarLayout>
 
     <FrameLayout
-        android:id="@+id/frameImage"
+        android:id="@+id/frameLocationContactImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/appBarLocation">
+        android:layout_below="@id/appBarLocationContact">
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/imgLocationContact"
@@ -45,7 +45,7 @@
         android:id="@+id/txtLocationName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/frameImage"
+        android:layout_below="@id/frameLocationContactImage"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"

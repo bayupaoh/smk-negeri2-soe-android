@@ -24,7 +24,7 @@ class LocationContactActivity : BaseActivity(), LocationContactActivityView {
     }
 
     private fun setupUI() {
-        setSupportActionBar(toolbarLocation)
+        setSupportActionBar(toolbarLocationContact)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Kontak Dan Lokasi"
 

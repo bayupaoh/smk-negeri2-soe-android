@@ -40,7 +40,10 @@
             android:label="@string/title_activity_vision_mision" />
         <activity
             android:name=".feature.locationcontact.LocationContactActivity"
-            android:label="@string/title_activity_location_contact"></activity>
+            android:label="@string/title_activity_location_contact" />
+        <activity
+            android:name=".feature.mayor.MayorActivity"
+            android:label="@string/title_activity_mayor"></activity>
     </application>
 
 </manifest>
