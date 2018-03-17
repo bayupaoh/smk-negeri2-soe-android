@@ -36,7 +36,7 @@ class DetailActivity : BaseActivity(), DetailActivityView, SwipeRefreshLayout.On
             2 -> supportActionBar?.title = "Detail Jurusan"
             3 -> supportActionBar?.title = "Detail Prestasi"
             4 -> supportActionBar?.title = "Detail Guru"
-            5 -> supportActionBar?.title = "Detail Ekstrakurikuler"
+            5 -> supportActionBar?.title = "Detail Ekstra Kurikuler"
         }
 
         srDetail.setOnRefreshListener(this)

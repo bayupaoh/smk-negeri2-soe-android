@@ -14,11 +14,18 @@ import kotlinx.android.synthetic.main.layout_home_head_item.view.*
  */
 class HomeHeadItemView(itemView: View, mItemClickListener: BaseRecyclerAdapter.OnItemClickListener?, mLongItemClickListener: BaseRecyclerAdapter.OnLongItemClickListener?)
     : BaseItemViewHolder<DummyDataHead>(itemView, mItemClickListener, mLongItemClickListener) {
+    private var mActionListener: HomeContentItemView.OnActionListener? = null
+
+    fun setActionListener(mActionListener: HomeContentItemView.OnActionListener?) {
+        this.mActionListener = mActionListener
+    }
+
     override fun bind(data: DummyDataHead?) {
         itemView.layoutHomeTitle.text = data?.title
         itemView.layoutHomeViewMore.text = "View More"
 
         var adapter = HomeContentAdapter(itemView.context)
+        adapter?.setActionListener(mActionListener)
         itemView.layoutHomeRecHome.setUpAsList()
         itemView.layoutHomeRecHome.setPullRefreshEnabled(false)
         itemView.layoutHomeRecHome.setLoadingMoreEnabled(false)

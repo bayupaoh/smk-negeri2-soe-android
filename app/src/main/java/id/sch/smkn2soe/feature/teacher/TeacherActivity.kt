@@ -6,11 +6,15 @@ import android.os.Bundle
 
 import id.sch.smkn2soe.R
 import id.sch.smkn2soe.base.ui.BaseActivity
+import id.sch.smkn2soe.feature.detail.DetailActivity
 import id.sch.smkn2soe.model.dummy.DummyDataHeaderTeacher
 import id.sch.smkn2soe.model.dummy.DummyDataTeacher
 import kotlinx.android.synthetic.main.activity_teacher.*
 
-class TeacherActivity : BaseActivity(), TeacherActivityView {
+class TeacherActivity : BaseActivity(), TeacherActivityView,TeacherActivityItemItemView.OnActionListener {
+    override fun onClicked(view: TeacherActivityItemItemView?) {
+        startActivity(DetailActivity.createIntent(this, 4, "https://api.androidhive.info/webview/index.html"))
+    }
 
     private var presenter: TeacherActivityPresenter? = null
     var adapter: TeacherActivityHeaderAdapter? = null
@@ -32,6 +36,7 @@ class TeacherActivity : BaseActivity(), TeacherActivityView {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         adapter = TeacherActivityHeaderAdapter(this)
+        adapter?.setActionListener(this)
         recTeacher.setUpAsList()
         recTeacher.adapter = adapter
         recTeacher.setPullRefreshEnabled(false)

@@ -7,9 +7,13 @@ import android.os.Bundle
 import id.sch.smkn2soe.R
 import id.sch.smkn2soe.base.ui.BaseActivity
 import id.sch.smkn2soe.model.dummy.DummyDataMayor
+import id.sch.smkn2soe.feature.detail.DetailActivity
 import kotlinx.android.synthetic.main.activity_mayor.*
 
-class MayorActivity : BaseActivity(), MayorActivityView {
+class MayorActivity : BaseActivity(), MayorActivityView, MayorActivityItemView.OnActionListener {
+    override fun onClicked(view: MayorActivityItemView?) {
+        startActivity(DetailActivity.createIntent(this, 2, "https://api.androidhive.info/webview/index.html"))
+    }
 
     var adapter: MayorActivityAdapter? = null
     private var presenter: MayorActivityPresenter? = null
@@ -31,6 +35,7 @@ class MayorActivity : BaseActivity(), MayorActivityView {
         supportActionBar?.title = "Jurusan"
 
         adapter = MayorActivityAdapter(this)
+        adapter?.setActionListener(this)
         recMayor.setUpAsList()
         recMayor.adapter = adapter
         recMayor.setPullRefreshEnabled(false)
@@ -77,6 +82,7 @@ class MayorActivity : BaseActivity(), MayorActivityView {
         finish()
         return super.onSupportNavigateUp()
     }
+
     companion object {
 
         fun createIntent(context: Context): Intent {

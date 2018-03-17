@@ -12,13 +12,21 @@ import id.sch.smkn2soe.model.dummy.DummyDataHead
 import id.sch.smkn2soe.model.dummy.DummyDataArticle
 import id.sch.smkn2soe.model.dummy.DummyDataEvent
 import id.sch.smkn2soe.model.dummy.DummyDataCalendar
+import id.sch.smkn2soe.feature.detail.DetailActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
 /**
  * A simple [Fragment] subclass.
  */
-class HomeFragment : BaseFragment() {
+class HomeFragment : BaseFragment(), HomeContentItemView.OnActionListener {
+    override fun onClicked(view: HomeContentItemView?) {
+        if (view?.getData() is DummyDataArticle) {
+            startActivity(activity?.let { DetailActivity.createIntent(it, 0, "https://api.androidhive.info/webview/index.html") })
+        }else if (view?.getData() is DummyDataEvent) {
+            startActivity(activity?.let { DetailActivity.createIntent(it, 1, "https://api.androidhive.info/webview/index.html") })
+        }
+    }
 
     private var adapter: HomeHeadAdapter? = null
     val SPLASH_TIME_OUT = 2000L
@@ -82,7 +90,7 @@ class HomeFragment : BaseFragment() {
         imageHome.setImageURI("https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/20728235_1576084712413168_4168956859642455220_n.jpg?oh=a9d528be39964e2c028cee24a459850c&oe=5B4E7EE3    ")
 
         adapter = HomeHeadAdapter(activity!!)
-
+        adapter?.setActionListener(this)
         recHome.setUpAsList()
 
         recHome.adapter = adapter

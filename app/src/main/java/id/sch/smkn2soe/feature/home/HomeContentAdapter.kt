@@ -15,6 +15,12 @@ class HomeContentAdapter(context: Context) : BaseRecyclerAdapter<Any, HomeConten
     val ITEM_TYPE_EVENT = 2
     val ITEM_TYPE_CALENDAR = 3
 
+    private var mActionListener: HomeContentItemView.OnActionListener? = null
+
+    fun setActionListener(mActionListener: HomeContentItemView.OnActionListener?) {
+        this.mActionListener = mActionListener
+    }
+
     override fun getItemResourceLayout(viewType: Int): Int {
         if (viewType == ITEM_TYPE_ARTICLE) {
             return R.layout.layout_home_content_article_item
@@ -36,6 +42,8 @@ class HomeContentAdapter(context: Context) : BaseRecyclerAdapter<Any, HomeConten
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeContentItemView {
-        return HomeContentItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+        val view = HomeContentItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+        view.setOnActionListener(mActionListener)
+        return view
     }
 }

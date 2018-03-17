@@ -11,10 +11,17 @@ import kotlinx.android.synthetic.main.layout_teacher_header_item.view.*
  */
 class TeacherActivityHeaderItemView(itemView: View, mItemClickListener: BaseRecyclerAdapter.OnItemClickListener?, mLongItemClickListener: BaseRecyclerAdapter.OnLongItemClickListener?)
     : BaseItemViewHolder<DummyDataHeaderTeacher>(itemView, mItemClickListener, mLongItemClickListener) {
+    private var mActionListener: TeacherActivityItemItemView.OnActionListener? = null
+
+    fun setActionListener(mActionListener: TeacherActivityItemItemView.OnActionListener?) {
+        this.mActionListener = mActionListener
+    }
+
     override fun bind(data: DummyDataHeaderTeacher?) {
         itemView.layoutTeacherHeaderTitle.text = data?.job
 
         var adapter= TeacherActivityItemAdapter(itemView.context)
+        adapter?.setActionListener(mActionListener)
         itemView.layoutTeacherRec.setUpAsGridInScroll(2)
         itemView.layoutTeacherRec.adapter = adapter
         itemView.layoutTeacherRec.setLoadingMoreEnabled(false)

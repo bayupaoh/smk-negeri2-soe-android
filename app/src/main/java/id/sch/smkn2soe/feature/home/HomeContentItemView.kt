@@ -15,7 +15,11 @@ import kotlinx.android.synthetic.main.layout_home_content_event_item.view.*
  */
 class HomeContentItemView(itemView: View, mItemClickListener: BaseRecyclerAdapter.OnItemClickListener?, mLongItemClickListener: BaseRecyclerAdapter.OnLongItemClickListener?)
     : BaseItemViewHolder<Any>(itemView, mItemClickListener, mLongItemClickListener) {
+    private var mActionListener: OnActionListener? = null
+    private var data: Any? = null
+
     override fun bind(data: Any?) {
+        this.data = data
         if (data is DummyDataArticle) {
             var item = data as DummyDataArticle
             itemView.layoutHomeContentArticleTitle.text = item?.title
@@ -33,5 +37,17 @@ class HomeContentItemView(itemView: View, mItemClickListener: BaseRecyclerAdapte
             itemView.layoutHomeCalendarDate.text = item?.date
             itemView.layoutHomeCalendarMonth.text = item?.month
         }
+        itemView.setOnClickListener { view -> mActionListener?.onClicked(this) }
     }
+    
+    fun getData(): Any? = data
+
+    fun setOnActionListener(mActionListener: OnActionListener?) {
+        this.mActionListener = mActionListener
+    }
+
+    interface OnActionListener {
+        fun onClicked(view: HomeContentItemView?)
+    }
+
 }
