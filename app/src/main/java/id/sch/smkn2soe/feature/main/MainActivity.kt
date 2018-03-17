@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.view.Menu
+import android.view.MenuItem
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem
 
@@ -30,6 +31,9 @@ class MainActivity : BaseActivity(), MainActivityView {
     }
 
     private fun initView() {
+        setSupportActionBar(toolbarMain)
+        supportActionBar?.title = ""
+
         var itemHome = AHBottomNavigationItem(getString(R.string.menu_home), R.drawable.ic_home, R.color.white)
         var itemNews = AHBottomNavigationItem(getString(R.string.menu_berita), R.drawable.ic_news, R.color.white)
         var itemEvent = AHBottomNavigationItem(getString(R.string.menu_acara), R.drawable.ic_event, R.color.white)
@@ -89,9 +93,13 @@ class MainActivity : BaseActivity(), MainActivityView {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
-        return true
+        return super.onCreateOptionsMenu(menu)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
+    }
+    
     override fun onDestroy() {
         super.onDestroy()
         presenter.let { it?.detachView() }
