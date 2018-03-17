@@ -13,6 +13,12 @@ class NewsAdapter(context: Context) : BaseRecyclerAdapter<Any, NewsItemView>(con
     val ITEM_TYPE_ARTICLE = 1
     val ITEM_TYPE_HEADER_ARTICLE = 2
 
+    private var mActionListener: NewsItemView.OnActionListener? = null
+
+    fun setActionListener(mActionListener: NewsItemView.OnActionListener?) {
+        this.mActionListener = mActionListener
+    }
+
     override fun getItemViewType(position: Int): Int {
         if (datas.get(position) is DummyDataHeaderArticle) {
             return ITEM_TYPE_HEADER_ARTICLE
@@ -29,5 +35,9 @@ class NewsAdapter(context: Context) : BaseRecyclerAdapter<Any, NewsItemView>(con
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsItemView = NewsItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsItemView {
+        var view = NewsItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+        view.setOnActionListener(mActionListener)
+        return view
+    }
 }

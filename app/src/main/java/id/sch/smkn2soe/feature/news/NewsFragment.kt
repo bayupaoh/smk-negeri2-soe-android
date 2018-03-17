@@ -8,13 +8,18 @@ import id.sch.smkn2soe.R
 import id.sch.smkn2soe.model.dummy.DummyDataArticle
 import id.sch.smkn2soe.model.dummy.DummyDataHeaderArticle
 import id.sch.smkn2soe.base.ui.BaseFragment
+import id.sch.smkn2soe.feature.detail.DetailActivity
 import kotlinx.android.synthetic.main.fragment_news.*
 
 
 /**
  * A simple [Fragment] subclass.
  */
-class NewsFragment : BaseFragment() {
+class NewsFragment : BaseFragment(),NewsItemView.OnActionListener {
+    override fun onClicked(view: NewsItemView?) {
+        startActivity(activity?.let { DetailActivity.createIntent(it,0,"https://api.androidhive.info/webview/index.html") })
+    }
+
     var adapter: NewsAdapter? = null
     override val resourceLayout: Int = R.layout.fragment_news
 
@@ -23,7 +28,8 @@ class NewsFragment : BaseFragment() {
     }
 
     private fun setupView() {
-        adapter = NewsAdapter(activity!!)
+        adapter = activity?.let { NewsAdapter(it) }
+        adapter?.setActionListener(this)
         recNews.setUpAsList()
         recNews.adapter = adapter
         recNews.setPullRefreshEnabled(false)

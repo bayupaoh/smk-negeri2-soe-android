@@ -1,5 +1,5 @@
 # SMK NEGERI 2 SOE APPS
-Aplikasi portal informasi tentang [SMK Negeri 2 SoE](http://smkn2soe.sch.id/newportal/html/index.php) di perangkat Android. Aplikasi dikembangkan menggunakan bahasa [**Kotlin**](https://kotlinlang.org/) dan [IDE Android Studio](https://developer.android.com/studio/index.html?hl=id).
+Aplikasi portal informasi tentang [SMK Negeri 2 SoE](http://smkn2soe.sch.id/newportal/html/index.php) di perangkat Android. Aplikasi dikembangkan menggunakan bahasa [**Kotlin**](https://kotlinlang.org/) dan [IDE Android Studio](https://developer.android.com/studio/index.html?hl=id). Aplikasi ini terinspirasi dari aplikasi [UNIKOM APPS](https://play.google.com/store/apps/details?id=com.codelabs.unikomapps&hl=en) dari [UNIKOM Codelabs](http://codelabs.unikom.ac.id/)
 
 # Kontribusi
 Untuk alumni dan juga siswa SMK Negeri 2 SoE yang ingin berkontribusi bisa menghubungi [bayupaoh@gmail.com]()

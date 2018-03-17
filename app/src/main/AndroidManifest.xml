@@ -52,7 +52,10 @@
             android:label="@string/title_activity_award" />
         <activity
             android:name=".feature.teacher.TeacherActivity"
-            android:label="@string/title_activity_teacher"></activity>
+            android:label="@string/title_activity_teacher" />
+        <activity
+            android:name=".feature.detail.DetailActivity"
+            android:label="@string/title_activity_detail_article"></activity>
     </application>
 
 </manifest>

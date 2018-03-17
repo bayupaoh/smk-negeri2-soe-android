@@ -66,7 +66,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:padding="12dp"
                         android:text="Visi"
-                        android:textColor="@color/grey_900"
+                        android:textColor="@color/blue"
                         android:textSize="20sp" />
 
                     <TextView
@@ -106,7 +106,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:padding="8dp"
                         android:text="Misi"
-                        android:textColor="@color/grey_900"
+                        android:textColor="@color/blue"
                         android:textSize="20sp" />
 
                     <TextView
