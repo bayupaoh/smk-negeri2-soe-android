@@ -8,13 +8,18 @@ import id.sch.smkn2soe.R
 import id.sch.smkn2soe.base.ui.BaseFragment
 import id.sch.smkn2soe.model.dummy.DummyDataEvent
 import id.sch.smkn2soe.model.dummy.DummyDataHeaderEvent
+import id.sch.smkn2soe.feature.detail.DetailActivity
 import kotlinx.android.synthetic.main.fragment_event.*
 
 
 /**
  * A simple [Fragment] subclass.
  */
-class EventFragment : BaseFragment() {
+class EventFragment : BaseFragment(), EventItemView.OnActionListener {
+    override fun onClicked(view: EventItemView?) {
+        startActivity(activity?.let { DetailActivity.createIntent(it, 1, "https://api.androidhive.info/webview/index.html") })
+    }
+
     var adapter: EventAdapter? = null
     override val resourceLayout: Int = R.layout.fragment_event
 
@@ -24,6 +29,7 @@ class EventFragment : BaseFragment() {
 
     private fun setupView() {
         adapter = EventAdapter(activity!!)
+        adapter?.setActionListener(this)
         recEvent.setUpAsList()
         recEvent.adapter = adapter
         recEvent.setPullRefreshEnabled(false)
@@ -33,7 +39,7 @@ class EventFragment : BaseFragment() {
     }
 
     private fun initData() {
-        val itemHeader= DummyDataHeaderEvent()
+        val itemHeader = DummyDataHeaderEvent()
         itemHeader.imageUrl = "https://4.bp.blogspot.com/-plkKCyAG6qU/V8Z1P2A7OLI/AAAAAAAAAYM/NhRfJpvLDwwpvawfjF4DzFvxYyarA57MgCLcB/s1600/Wisata%2BBudaya%2BTarian%2BTebe.jpg"
         itemHeader.date = "12 Januari 2018 19:30"
         itemHeader.title = "Pentas Seni Tari Tradisional NTT"

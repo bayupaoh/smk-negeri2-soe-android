@@ -13,6 +13,12 @@ class EventAdapter(context: Context) : BaseRecyclerAdapter<Any, EventItemView>(c
     val ITEM_TYPE_EVENT = 1
     val ITEM_TYPE_HEADER_EVENT = 2
 
+    private var mActionListener: EventItemView.OnActionListener? = null
+
+    fun setActionListener(mActionListener: EventItemView.OnActionListener?) {
+        this.mActionListener = mActionListener
+    }
+
     override fun getItemViewType(position: Int): Int {
         if (datas.get(position) is DummyDataHeaderEvent) {
             return ITEM_TYPE_HEADER_EVENT
@@ -29,5 +35,9 @@ class EventAdapter(context: Context) : BaseRecyclerAdapter<Any, EventItemView>(c
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventItemView = EventItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventItemView {
+        val view = EventItemView(getView(parent!!, viewType), mItemClickListener, mLongItemClickListener)
+        view.setOnActionListener(mActionListener)
+        return view
+    }
 }
