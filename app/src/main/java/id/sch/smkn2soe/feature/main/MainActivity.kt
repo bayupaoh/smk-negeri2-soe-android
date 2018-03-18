@@ -11,6 +11,8 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem
 
 import id.sch.smkn2soe.R
 import id.sch.smkn2soe.base.ui.BaseActivity
+import id.sch.smkn2soe.feature.about.AboutActivity
+import id.sch.smkn2soe.feature.setting.SettingActivity
 import id.sch.smkn2soe.feature.walkthrough.WalkthroughActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -97,9 +99,13 @@ class MainActivity : BaseActivity(), MainActivityView {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_setting -> startActivity(SettingActivity.createIntent(this))
+            R.id.action_about -> startActivity(AboutActivity.createIntent(this))
+        }
         return super.onOptionsItemSelected(item)
     }
-    
+
     override fun onDestroy() {
         super.onDestroy()
         presenter.let { it?.detachView() }

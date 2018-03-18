@@ -55,7 +55,13 @@
             android:label="@string/title_activity_teacher" />
         <activity
             android:name=".feature.detail.DetailActivity"
-            android:label="@string/title_activity_detail_article"></activity>
+            android:label="@string/title_activity_detail_article" />
+        <activity
+            android:name=".feature.setting.SettingActivity"
+            android:label="@string/title_activity_suitcore" />
+        <activity
+            android:name=".feature.about.AboutActivity"
+            android:label="@string/title_activity_about"></activity>
     </application>
 
 </manifest>
